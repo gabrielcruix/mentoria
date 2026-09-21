@@ -6,7 +6,7 @@
      Until then, every ".js-cta" button falls back to its href (an
      in-page anchor to the offer section) so the CTAs stay functional.
      ------------------------------------------------------------------ */
-  var CHECKOUT_URL = "COLE_AQUI_SEU_CHECKOUT_URL";
+  var CHECKOUT_URL = "https://pay.kiwify.com.br/s9NUHX4";
   var isCheckoutConfigured = /^https?:\/\//i.test(CHECKOUT_URL);
 
   if (isCheckoutConfigured) {
