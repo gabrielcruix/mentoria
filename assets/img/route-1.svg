@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121f33"/>
+      <stop offset="100%" stop-color="#0d1826"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="rgba(217,171,92,0.22)"/>
+      <stop offset="100%" stop-color="rgba(217,171,92,0)"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0"/>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="900" height="700" fill="url(#bg)"/>
+  <rect width="900" height="700" fill="url(#glow)"/>
+  <!-- dashed route line motif -->
+  <path d="M0,574.0 C 225.0,420.0 360.0,665.0 558.0,489.99999999999994 S 810.0,350.0 900,434.0"
+        fill="none" stroke="rgba(217,171,92,0.28)" stroke-width="2" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <circle cx="126.00000000000001" cy="532.0" r="4" fill="#d9ab5c" opacity="0.55"/>
+  <circle cx="774.0" cy="409.5" r="4" fill="#d9ab5c" opacity="0.55"/>
+  <rect width="900" height="700" filter="url(#grain)" opacity="0.5"/>
+  <g transform="translate(400.0,210.0) scale(1)" fill="none" stroke="#f3d999" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    
+        <circle cx="42" cy="42" r="20"/>
+        <line x1="57" y1="57" x2="76" y2="76"/>
+        <path d="M34 42 L40 48 L52 34" />
+    
+  </g>
+</svg>
