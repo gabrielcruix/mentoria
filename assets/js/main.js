@@ -1,6 +1,26 @@
 (function () {
   "use strict";
 
+  /* ------------------------------------------------------------------
+     Checkout link — replace with the real checkout URL when it exists.
+     Until then, every ".js-cta" button falls back to its href (an
+     in-page anchor to the offer section) so the CTAs stay functional.
+     ------------------------------------------------------------------ */
+  var CHECKOUT_URL = "COLE_AQUI_SEU_CHECKOUT_URL";
+  var isCheckoutConfigured = /^https?:\/\//i.test(CHECKOUT_URL);
+
+  if (isCheckoutConfigured) {
+    document.querySelectorAll(".js-cta").forEach(function (link) {
+      link.setAttribute("href", CHECKOUT_URL);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    });
+  } else {
+    console.info(
+      "[Mentoria Cruix] CHECKOUT_URL ainda não configurada em assets/js/main.js — os botões estão levando para a seção de oferta."
+    );
+  }
+
   /* Header background on scroll */
   var header = document.getElementById("siteHeader");
   var hero = document.getElementById("topo");
