@@ -560,7 +560,7 @@ section { position: relative; }
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  min-height: 220px;
+  min-height: clamp(260px, 38vw, 360px);
   display: flex;
   align-items: flex-end;
   border: 1px solid var(--navy-line);
@@ -852,13 +852,37 @@ section { position: relative; }
 }
 .proof-card {
   background: var(--white);
-  border: 1px dashed var(--navy-line);
+  border: 1px solid var(--navy-line);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
+.proof-card.is-placeholder { border-style: dashed; }
+.proof-shot {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--navy-line);
+  background: var(--paper-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proof-shot img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+}
+.proof-caption {
+  font-size: 14px;
+  color: var(--ink-soft);
+  padding: 0 4px;
+}
+.proof-caption strong { color: var(--ink); font-weight: 600; }
 .proof-top { display: flex; align-items: center; gap: 14px; }
 .proof-avatar {
   width: 52px; height: 52px;
