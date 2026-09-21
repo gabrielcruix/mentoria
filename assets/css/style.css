@@ -177,6 +177,12 @@ section { position: relative; }
   padding: 12px 22px;
   font-size: 12.5px;
 }
+@media (max-width: 420px) {
+  .site-header { padding-left: 16px; padding-right: 16px; }
+  .brand { font-size: 15px; letter-spacing: 0.04em; white-space: nowrap; }
+  .header-cta { padding: 10px 14px; font-size: 11px; }
+  .header-cta::after { content: none; }
+}
 
 /* ==========================================================================
    HERO — full-bleed cinematic photo
@@ -273,6 +279,15 @@ section { position: relative; }
   color: rgba(247, 242, 231, 0.7);
 }
 .hero-price-note strong { color: var(--gold-light); font-weight: 700; }
+
+/* ---------- signature line — "Eu vou ser o seu mentor." (hero, oferta, fechamento) ---------- */
+.signature-line {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(19px, 2.4vw, 24px);
+  color: var(--gold-light);
+}
 
 /* ==========================================================================
    VSL placeholder
@@ -588,6 +603,12 @@ section { position: relative; }
   padding: 5px 12px;
   border-radius: 100px;
 }
+.roadmap-disclaimer {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
 
 /* ==========================================================================
    SECTION 7 — WHAT YOU RECEIVE (dark checklist card)
@@ -640,6 +661,49 @@ section { position: relative; }
   margin-top: 8px;
   font-size: 14.5px;
   color: rgba(247, 242, 231, 0.68);
+}
+
+/* ---------- pillar cards — light variant, reused for "peças da vida nômade" and "o que você vai aprender" ---------- */
+.pillar-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 700px) {
+  .pillar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1020px) {
+  .pillar-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--navy-line);
+  border-radius: var(--radius);
+  padding: 26px 26px;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 40px -28px rgba(16, 14, 11, 0.25);
+}
+.pillar-num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--gold-deep);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.pillar-card h3 {
+  margin-top: 12px;
+  font-size: 17px;
+  color: var(--ink);
+}
+.pillar-card p {
+  margin-top: 8px;
+  font-size: 14.5px;
+  color: var(--ink-soft);
 }
 
 /* ==========================================================================
